@@ -18,7 +18,7 @@ gem 'webpacker',                  '5.4.0'
 gem 'turbolinks',                 '5.2.1'
 gem 'jbuilder',                   '2.10.0'
 gem 'bootsnap',                   '1.9.3', require: false
-gem 'rexml',                      '3.2.4'
+gem 'rexml',                      '3.2.5'
 gem 'rubocop',                    '1.39.0'
 
 
