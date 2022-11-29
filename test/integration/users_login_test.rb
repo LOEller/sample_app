@@ -39,6 +39,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     post login_path, params: { session: { email: @user.email, password: "pass123"}}
     assert_redirected_to @user
     follow_redirect!
+    assert is_logged_in?
 
     delete logout_path
     assert_redirected_to root_path
