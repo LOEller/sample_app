@@ -5,3 +5,9 @@ luke:
   name: Luke Eller
   email: lukey@example.com
   password_digest: <%= User.digest('pass123') %>
+
+
+brody:
+  name: Lady Gaga
+  email: brody@gmail.com
+  password_digest: <%= User.digest('pass123') %>
