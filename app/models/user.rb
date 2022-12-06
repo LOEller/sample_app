@@ -12,7 +12,7 @@ class User < ApplicationRecord
   before_save { self.email = email.downcase }
 
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
 
   # creates a new remember token, assigns to self.remember_token
