@@ -5,6 +5,7 @@ luke:
   name: Luke Eller
   email: lukey@example.com
   password_digest: <%= User.digest('pass123') %>
+  admin: true
 
 
 brody:
