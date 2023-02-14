@@ -21,6 +21,8 @@ class ActiveSupport::TestCase
   def log_in_as(user)
     session[:user_id] = user.id
   end
+
+  ENV['SENDER_EMAIL'] = 'noreply@example.com'
 end
 
 
@@ -35,4 +37,6 @@ class ActionDispatch::IntegrationTest
       } 
     }
   end
+
+  ENV['SENDER_EMAIL'] = 'noreply@example.com'
 end
