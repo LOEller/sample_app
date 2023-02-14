@@ -6,17 +6,27 @@ luke:
   email: lukey@example.com
   password_digest: <%= User.digest('pass123') %>
   admin: true
-
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 brody:
   name: Lady Gaga
   email: brody@gmail.com
   password_digest: <%= User.digest('pass123') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
+unactivated:
+  name: Not Active
+  email: ugly_boy@gmail.com
+  password_digest: <%= User.digest('pass123') %>
+  activated: false
 
 <% 40.times do |n| %>
 user_<%= n %>:
   name: <%= Faker::Name.name %>
   email: <%= "example-#{n}@railstutorial.org" %>
   password_digest: <%= User.digest('pass123') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 <% end %>

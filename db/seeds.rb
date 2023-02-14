@@ -4,7 +4,9 @@ User.create!(
   email: "leller108@gmail.com", 
   password: "pass123", 
   password_confirmation: "pass123",
-  admin: true
+  admin: true,
+  activated: true,
+  activated_at: Time.zone.now
 )
 
 # Generate a bunch of additional users.
@@ -12,5 +14,12 @@ User.create!(
   name = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
-  User.create!(name: name, email: email, password: password, password_confirmation: password)
+  User.create!(
+    name: name, 
+    email: email, 
+    password: password, 
+    password_confirmation: password, 
+    activated: true, 
+    activated_at: Time.zone.now
+  )
 end
